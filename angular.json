@@ -35,9 +35,15 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/manifest.webmanifest"
+              "src/manifest.webmanifest",
+              {
+                "glob": "**/*",
+                "input": "./node_modules/@bcp/stl-ui-components/dist/assets/",
+                "output": "./assets/"
+              }
             ],
             "styles": [
+              "node_modules/@bcp/stl-ui-components/dist/bcp_web_ui_components/bcp_web_ui_components.scss",
               "src/styles.scss"
             ],
             "scripts": [],

@@ -1,0 +1,108 @@
+<p>SOY EL COMPONENTE SOME</p>
+<span id="buttonSpanSrOnlyAria1" class="bcp-ffw-sr-only"
+  >Para pasar a la siguiente página</span
+><span id="buttonSpanSrOnlyAria2" class="bcp-ffw-sr-only">Editar</span
+><span id="buttonSpanSrOnlyAria3" class="bcp-ffw-sr-only"
+  >Descripción para editar</span
+><span id="buttonSpanSrOnlyAria4" class="bcp-ffw-sr-only"
+  >Descripción para Notificación</span
+><span id="buttonSpanSrOnlyAria5" class="bcp-ffw-sr-only">Preguntas</span
+><span id="buttonSpanSrOnlyAria6" class="bcp-ffw-sr-only"
+  >Descripción para Preguntas</span
+><span id="buttonSpanSrOnlyAria7" class="bcp-ffw-sr-only"
+  >Descripción para Teléfono</span
+><span id="buttonSpanSrOnlyAria8" class="bcp-ffw-sr-only">Siguiente</span
+><span id="buttonSpanSrOnlyAria9" class="bcp-ffw-sr-only">Mensaje</span
+><span id="buttonSpanSrOnlyAria10" class="bcp-ffw-sr-only"
+  >Para enviar un mensaje</span
+>
+<!-- Jerarquías -->
+<bcp-button shape="rectangle" tier="primary">Primario</bcp-button
+><bcp-button shape="rectangle" tier="secondary">Secundario</bcp-button
+><!-- Tamaños -->
+<bcp-button shape="rectangle" tier="primary" size="sm">Pequeño</bcp-button
+><bcp-button shape="rectangle" tier="primary" size="md">Mediano</bcp-button
+><bcp-button shape="rectangle" tier="primary" size="lg">Grande</bcp-button
+><!-- Botones Fluidos -->
+<bcp-button shape="rectangle" tier="primary" size="sm" [fullWidth]="true"
+  >Fluido Pequeño</bcp-button
+><bcp-button shape="rectangle" tier="primary" size="md" [fullWidth]="true"
+  >Fluido Mediano</bcp-button
+><bcp-button shape="rectangle" tier="primary" size="lg" [fullWidth]="true"
+  >Fluido Grande</bcp-button
+><!-- Estados --><bcp-button shape="rectangle" tier="primary"
+  >Default</bcp-button
+><bcp-button shape="rectangle" tier="primary" [active]="true"
+  >Pressed</bcp-button
+><bcp-button shape="rectangle" tier="primary" [disabled]="true"
+  >Disabled</bcp-button
+><bcp-button shape="rectangle" tier="secondary">Default</bcp-button
+><bcp-button shape="rectangle" tier="secondary" [active]="true"
+  >Pressed</bcp-button
+><bcp-button shape="rectangle" tier="secondary" [disabled]="true"
+  >Disabled</bcp-button
+><!-- Fondo Oscuro -->
+<div style="background-color: #002a8d; padding: 20px">
+  <bcp-button shape="rectangle" tier="primary" mode="dark">Default</bcp-button
+  ><bcp-button shape="rectangle" tier="primary" mode="dark" [active]="true"
+    >Pressed</bcp-button
+  ><bcp-button shape="rectangle" tier="primary" mode="dark" [disabled]="true"
+    >Disabled</bcp-button
+  ><bcp-button shape="rectangle" tier="secondary" mode="dark"
+    >Default</bcp-button
+  ><bcp-button shape="rectangle" tier="secondary" mode="dark" [active]="true"
+    >Pressed</bcp-button
+  ><bcp-button shape="rectangle" tier="secondary" mode="dark" [disabled]="true"
+    >Disabled</bcp-button
+  >
+</div>
+
+<h2>Iconos</h2>
+<hr />
+<bcp-icon name="arrow-left-r"></bcp-icon>
+<bcp-icon name="arrow-right-r"></bcp-icon><bcp-icon name="pen-b"></bcp-icon>
+<bcp-icon name="bell-b"></bcp-icon><bcp-icon name="face-happy-l"></bcp-icon>
+<bcp-icon name="face-sad-l"></bcp-icon>
+
+<h2>Alertas</h2>
+<bcp-alert
+  [accessibleConfig]="accessibleConfigAriaLabel"
+  state="success"
+  [open]="true"
+  message="¡Bien hecho! Leíste con éxito este importante mensaje de alerta."
+  ><bcp-icon
+    [accessibleConfig]="accessibleConfigIcon"
+    slot="icon"
+    name="check-circle-r"
+  ></bcp-icon></bcp-alert
+><bcp-alert
+  [accessibleConfig]="accessibleConfigAriaLabelledby"
+  state="attention"
+  [open]="true"
+  message="¡Atento! Esta alerta requiere tu atención, pero no es tan importante."
+  ><bcp-icon
+    [accessibleConfig]="accessibleConfigIcon1"
+    slot="icon"
+    name="eye-r"
+  ></bcp-icon></bcp-alert
+><bcp-alert
+  [accessibleConfig]="accessibleConfigAriaLabel"
+  state="warning"
+  [open]="true"
+  message="¡Cuidado! Es muy importante que leas este mensaje de alerta."
+  ><bcp-icon
+    [accessibleConfig]="accessibleConfigIcon2"
+    slot="icon"
+    name="exclamation-triangle-r"
+  ></bcp-icon></bcp-alert
+><bcp-alert
+  [accessibleConfig]="accessibleConfigAriaLabelledby"
+  state="error"
+  [open]="true"
+  message="¡Error! Haz algunos cambios antes de volver a enviar el formulario."
+  ><bcp-icon
+    [accessibleConfig]="accessibleConfigIcon3"
+    slot="icon"
+    name="exclamation-triangle-r"
+  ></bcp-icon
+></bcp-alert>
