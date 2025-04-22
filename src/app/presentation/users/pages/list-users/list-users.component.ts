@@ -6,11 +6,12 @@ import { NotificationService } from '../../../../shared/services/notification.se
 import { PushNotification } from '../../../../domain/notifications/models/notification.model';
 import { Subscription } from 'rxjs';
 import { AtomsModule } from 'src/app/shared/atoms/atoms.module';
+import { OrganismsModule } from 'src/app/shared/organisms/organisms.module';
 
 @Component({
   standalone: true,
   selector: 'app-list-users',
-  imports: [CommonModule, AtomsModule],
+  imports: [CommonModule,OrganismsModule,AtomsModule],
   templateUrl: './list-users.component.html',
   styleUrls: ['./list-users.component.scss'],
 })

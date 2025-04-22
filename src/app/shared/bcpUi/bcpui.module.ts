@@ -1,19 +1,18 @@
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { BcpAlertModule, BcpButtonModule, BcpIconModule } from '@bcp/ng-ui-components';
+import { NgModule } from '@angular/core';
+import { BcpAlertModule, BcpButtonModule, BcpIconModule, BcpInputModule } from '@bcp/ng-ui-components';
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule,
     BcpButtonModule,
     BcpIconModule,
-    BcpAlertModule
+    BcpAlertModule,
+    BcpInputModule 
   ],
   exports:[
     BcpButtonModule,
     BcpIconModule,
-    BcpAlertModule
+    BcpAlertModule,
+    BcpInputModule 
   ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class BcpuiModule { }

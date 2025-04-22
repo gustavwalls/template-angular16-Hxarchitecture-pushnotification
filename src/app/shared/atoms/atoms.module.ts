@@ -1,15 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SomeComponent } from './some/some.component';
+import { InputTextComponent } from './input-text/input-text.component';
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
-    SomeComponent
+    SomeComponent,
+    InputTextComponent
   ],
   exports:[
-    SomeComponent
+    SomeComponent,
+    InputTextComponent
   ]
 })
 export class AtomsModule { }
