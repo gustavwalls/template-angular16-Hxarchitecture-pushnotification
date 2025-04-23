@@ -6,12 +6,13 @@ import { ControlValueAccessor, FormControl, NgControl, ReactiveFormsModule } fro
 @Component({
   selector: 'input-text',
   standalone: true,
-  imports: [CommonModule, BcpuiModule,ReactiveFormsModule,NgClass],
+  imports: [CommonModule, BcpuiModule, ReactiveFormsModule, NgClass],
   templateUrl: './input-text.component.html',
   styleUrls: ['./input-text.component.scss'],
 })
 export class InputTextComponent implements OnInit, ControlValueAccessor {
   @Input() label = 'labelText';
+  @Input() placeHolder = '';
   formControl!: FormControl;
   value: any = '';
   onChange: any = () => {};
@@ -46,8 +47,9 @@ export class InputTextComponent implements OnInit, ControlValueAccessor {
     this.disabled = isDisabled;
   }
 
-  // Método para actualizar el valor y notificar
+  // Método actualizado para manejar el valor del input
   updateValue(event: any): void {
+    console.log('Valor recibido:', event);
     this.value = event;
     this.onChange(event);
     this.onTouched();

@@ -4,10 +4,16 @@
   <form [formGroup]="formGroup" (ngSubmit)="register()">
     <div class="mb-3">
       <input-text
-      [label]="'Nombre(s)*'"
+      [label]="'Nombre(s)'"
       formControlName="name" />
+     <!--  <bcp-input 
+      type="text" 
+      formControlName="name"
+      >
+    </bcp-input> -->
     </div>
-    <button type="submit" [disabled]="!formGroup.valid" class="btn btn-primary">
+<!--     [disabled]="!formGroup.valid" -->
+    <button type="submit"  class="btn btn-primary">
       Registrar
     </button>
   </form>

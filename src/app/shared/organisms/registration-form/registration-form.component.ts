@@ -1,12 +1,13 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { AtomsModule } from '../../atoms/atoms.module';
+import { BcpuiModule } from '../../bcpUi/bcpui.module';
 
 @Component({
   selector: 'registration-form',
   standalone: true,
-  imports: [CommonModule,ReactiveFormsModule,AtomsModule],
+  imports: [CommonModule,ReactiveFormsModule,AtomsModule,BcpuiModule],
   templateUrl: './registration-form.component.html',
   styleUrls: ['./registration-form.component.scss']
 })
@@ -16,10 +17,11 @@ export class RegistrationFormComponent implements OnInit{
 
   ngOnInit(): void {
     this.formGroup = this.fb.group({
-      name: ['Hola'],
+      name: [''],
     });
   }
+  
   register() {
-    console.log('a ver =>', this.formGroup.value);
+    console.log('Valores del formulario al registrar:', this.formGroup.value);
   }
 }

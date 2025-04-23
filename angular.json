@@ -44,7 +44,8 @@
             ],
             "styles": [
               "node_modules/@bcp/stl-ui-components/dist/bcp_web_ui_components/bcp_web_ui_components.scss",
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/css/simple-grid.scss"
             ],
             "scripts": [],
             "serviceWorker": true,
@@ -114,8 +115,22 @@
             ],
             "scripts": []
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     }
+  },
+  "cli": {
+    "schematicCollections": [
+      "angular-eslint"
+    ]
   }
 }
