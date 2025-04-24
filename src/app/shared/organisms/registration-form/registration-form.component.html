@@ -1,20 +1,76 @@
-<h2>Formulario basico</h2>
-<hr>
-<section>
-  <form [formGroup]="formGroup" (ngSubmit)="register()">
-    <div class="mb-3">
-      <input-text
-      [label]="'Nombre(s)'"
-      formControlName="name" />
-     <!--  <bcp-input 
-      type="text" 
-      formControlName="name"
-      >
-    </bcp-input> -->
+<div class="row">
+    <div class="col-5">
+        <div style="background-color: purple; height: 100vh; width: 100%" class="hidden-sm"></div>
     </div>
-<!--     [disabled]="!formGroup.valid" -->
-    <button type="submit"  class="btn btn-primary">
-      Registrar
-    </button>
-  </form>
-</section>
+    <div class="col-7">
+        <section class="container" style="max-width: 420px">
+            <h2>Bienvenido a PR</h2>
+            <hr />
+            <form [formGroup]="myForm" (ngSubmit)="register()">
+                <div class="mb-4">
+                    <bcp-input
+                        label="Nombre(s)*"
+                        type="text"
+                        formControlName="name"
+                        placeholder="Ej. José"
+                        [state]="formUtils.isValidField(myForm, 'name') ? 'error' : ''"
+                        [message]="
+                            formUtils.isValidField(myForm, 'name')
+                                ? formUtils.getFieldError(myForm, 'name', 'Nombre')
+                                : ''
+                        "
+                    />
+                </div>
+                <div class="mb-4">
+                    <bcp-input
+                        label="Primer apellido*"
+                        type="text"
+                        formControlName="lastName"
+                        placeholder="Ej. Sanchez"
+                        [state]="formUtils.isValidField(myForm, 'lastName') ? 'error' : ''"
+                        [message]="
+                            formUtils.isValidField(myForm, 'lastName')
+                                ? formUtils.getFieldError(myForm, 'lastName', 'Primer apellido')
+                                : ''
+                        "
+                    />
+                </div>
+                <div class="mb-4">
+                    <bcp-input
+                        label="Segundo apellido (opcional)"
+                        type="text"
+                        formControlName="secondName"
+                        placeholder="Ej. Carrión"
+                        [state]="formUtils.isValidField(myForm, 'secondName') ? 'error' : ''"
+                        [message]="
+                            formUtils.isValidField(myForm, 'secondName')
+                                ? formUtils.getFieldError(myForm, 'secondName', 'Segundo apellido')
+                                : ''
+                        "
+                    />
+                </div>
+                <div class="mb-4">
+                    <bcp-select-input
+                        placeholder="Nro de documento"
+                        [selectOptions]="selectOptions"
+                        bcpCtrlForm
+                        formControlName="selectDniCe"
+                        [state]="formUtils.isValidField(myForm, 'selectDniCe') ? 'error' : ''"
+                        [message]="
+                            formUtils.isValidField(myForm, 'selectDniCe')
+                                ? formUtils.getFieldError(
+                                      myForm,
+                                      'selectDniCe',
+                                      'Tipo de documento'
+                                  )
+                                : ''
+                        "
+                    ></bcp-select-input>
+                </div>
+                <button type="submit" [disabled]="!myForm.valid" class="btn btn-primary">
+                    Registrar
+                </button>
+            </form>
+        </section>
+    </div>
+</div>
